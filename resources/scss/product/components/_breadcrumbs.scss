@@ -9,9 +9,6 @@
         @include min(1360px){
             margin-left:60px;
         }
-        @include min(1700px){
-            margin-left:210px;
-        }
     }
     &__list{
         display: flex;
