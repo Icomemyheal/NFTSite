@@ -1,0 +1,118 @@
+/* Product Slider */
+.product__slider{
+    margin-top:16px;
+    height:261px;
+    @include min(992px){
+        width:450px;
+        height:450px;
+    }
+    &--details{
+        position: relative;
+        @include min(576px){
+            left:150px;
+        }
+        @include min(768px){
+            left:250px;
+        }
+        .swiper-fav-btn{
+        position: absolute;
+        bottom: 41px;
+        padding:0;
+        outline: none;
+        right:8px;
+        z-index:2;
+        background:transparent;
+        border:none;
+        cursor: pointer;
+        height:30px;
+        width:30px;
+        .slider__heart{
+            width:20px;
+            height:20px;
+            fill: transparent;
+            stroke: $steelBlue;
+            @include min(576px){
+                width:24px;
+                height:24px;
+            }
+        }   
+        .slider__heart.added{
+            fill: transparent;
+            stroke: $orangeRed;
+        }
+    }
+    }
+    &--special{
+        @include min(1360px){
+            left:350px;
+        }
+        position: absolute;
+        display: inline-block;
+        top:35px;
+        padding:10px 15px;
+        text-align: center;
+        border-radius: 25px 0px 0px 25px;
+        background:#2AAF38;
+        width: fit-content;
+        left:197px;
+        z-index: 2;
+        .slider__special--span{
+            font-family: $ralewayFont;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 12px;
+            color:#fff;
+            @include min(576px){
+                    font-size:14px;
+            }
+        }
+    }
+    .swiper-wrapper{
+        width:100%;
+    }
+    .swiper-slide{
+        @include min(576px){
+                display: flex;
+                justify-content: center;
+        }
+        img{
+            width:276px;
+            height:181px;
+            @include min(576px){
+                height:100%;
+                width:100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .product__swiper--pagination{
+        .swiper-pagination-bullet{
+            width:6px;
+            height:6px;
+            background:$snow;
+            opacity:1;
+            @include min(576px){
+                    width:8px;
+                    height:8px;
+            }
+        }
+        .swiper-pagination-bullet:not(:first-child){
+            margin-left:15px;
+            margin-right:0;
+        }
+        .swiper-pagination-bullet:first-child{
+            margin-left:15px;
+            margin-right:0;
+        }
+        .swiper-pagination-bullet-active{
+            width:8px;
+            height:8px;
+            opacity:1;
+            background:$steelBlue;
+            @include min(576px){
+                    width:10px;
+                    height:10px;
+            }
+        }
+    }
+}

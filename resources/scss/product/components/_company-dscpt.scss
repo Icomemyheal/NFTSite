@@ -1,0 +1,108 @@
+/* Description Text */
+.company__description{
+    width:100%;
+    margin-top:40px;
+    @include min(576px){
+        padding-left:15px;
+    }
+    @include min(1200px){
+        padding-left:30px;
+    }
+    &--container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    &--title{
+        font-family: $ralewayFont;
+        color:$steelBlue;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23px;
+        @include min(1700px){
+            font-size:28px;
+            margin-bottom:20px;
+        }
+    }
+    &--text{
+        font-family: $ralewayFont;
+        color:$charcoal;
+        font-size: 12px;
+        font-weight: 500;
+        @include min(576px){
+            font-size:13px;
+        }
+        @include min(768px){
+            font-size:15px;
+        }
+        @include min(1700px){
+            font-size:17px;
+        }
+    }
+    &--text p{
+        padding:0;
+        margin:0;
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+    &--text p:last-child{
+        margin-bottom:0;
+    }
+    &--text span{
+        margin-bottom:20px;
+        font-weight:600;
+    }
+    .text-reveal--btn{
+        border:none;
+        outline: none;
+        cursor: pointer;
+        background:transparent;
+        position: absolute;
+        right:15px;
+        bottom:10px;
+        z-index:2;
+        width:32px;
+        height:32px;
+        .reveal-action--svg{
+            width:24px;
+            height:24px;
+            @include min(1700px){
+                width:32px;
+                height:32px;
+            }
+        }
+    }
+    .continue__description--text{
+        overflow: hidden;
+        height:220px;
+        position: relative;
+    }
+    .text-reveal--btn.reveal{
+        display: none;
+        visibility: hidden;
+    }
+    .continue__description--text.reveal{
+        overflow: visible;
+        height:100%;
+    }
+    .continue__description--text.reveal::after{
+        content:"";
+        height:100%;
+        position: absolute;
+        bottom: 0;
+	    right: 0;
+	    left: 0;
+        pointer-events: all;
+        background:none;
+    }
+    .continue__description--text::after{
+        content:"";
+        position: absolute;
+        bottom: 0;
+	    right: 0;
+	    left: 0;
+        height: 340px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+        pointer-events: none;
+    }
+}
