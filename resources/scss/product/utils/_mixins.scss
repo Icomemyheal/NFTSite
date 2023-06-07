@@ -46,3 +46,9 @@
         margin:0 auto;
     }
 }
+@include min(1920px) {
+    .container {
+        max-width: 1820px;
+        margin:0 auto;
+    }
+}

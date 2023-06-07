@@ -223,7 +223,7 @@
                             <div class="dropdown__modal--selected">
                                 <div class="dropdown_heart__icon--container">
                                     <div class="dropdown_heart__icon--count">
-                                        <span class="js-count">0</span>
+                                        <span class="js-count-fav-mb">0</span>
                                     </div>
                                     <svg class="heart__icon">
                                         <use xlink:href="./img/product/sprites.svg#heart"></use>

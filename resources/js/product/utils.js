@@ -9,7 +9,8 @@ const countDecrementArrow = document.querySelector('.counterDecrArrow__svg');
 
 const addToCartBtn = document.querySelector('.js-add-to-cart');
 const addToFavBtn = document.querySelector('.js-fav-btn');
-const countFav = document.querySelector('.js__count-fav');
+const countFavPc = document.querySelector('.js__count-fav');
+const countFavMb = document.querySelector('.js-count-fav-mb');
 const countCart = document.querySelector('.js__count-cart');
 const favHeart = document.querySelector('.slider__heart-js');
 
@@ -32,21 +33,19 @@ function addQueryParam(paramValue) {
 
 addToFavBtn.addEventListener('click', () => {
     let count = 0;
-    if(countFav.innerHTML > 0){
-        countFav.innerHTML = count;
+    if(countFavPc.innerHTML > 0 && countFavMb.innerHTML > 0){
+        countFavPc.innerHTML = count;
+        countFavMb.innerHTML = count;
         favHeart.classList.remove('added');
     } else {
         count++;
-        countFav.innerHTML = count;
+        countFavPc.innerHTML = count;
+        countFavMb.innerHTML = count;
         favHeart.classList.add('added');
     }
 });
 addToCartBtn.addEventListener('click', () => {
-    if(countCart.innerHTML > 0){
-        countCart.innerHTML = qantityInput.value;
-    } else {
-        countCart.innerHTML = qantityInput.value;
-    }
+    countCart.innerHTML = qantityInput.value;
 });
 revealBtn.addEventListener('click', () => {
     revealBtn.classList.add('reveal');
